@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prism.css">
+
+
+
+</head>
+
+<body>
+    <div class="box1">
+        <div class="python">
+            <h2>C++</h2>
+            <pre class="language-markup">
+                <code class="language-cpp">
+                    <pre>
+                        <code class="language-cpp">
+                      #include &lt;iostream&gt;
+                      #include &lt;vector&gt;
+                      
+                      using namespace std;
+                      
+                      int binarySearch(vector&lt;int&gt;&amp; playlist, int target) {
+                          int left = 0;
+                          int right = playlist.size() - 1;
+                      
+                          while (left &lt;= right) {
+                              int mid = left + (right - left) / 2;
+                      
+                              if (playlist[mid] == target) {
+                                  return mid;
+                              } else if (playlist[mid] &lt; target) {
+                                  left = mid + 1;
+                              } else {
+                                  right = mid - 1;
+                              }
+                          }
+                      
+                          return left;
+                      }
+                      
+                      int main() {
+                          int n;
+                          cin &gt;&gt; n;
+                          vector&lt;int&gt; playlist(n);
+                      
+                          for (int i = 0; i &lt; n; i++) {
+                              cin &gt;&gt; playlist[i];
+                          }
+                      
+                          int target;
+                          cin &gt;&gt; target;
+                      
+                          int result = binarySearch(playlist, target);
+                          cout &lt;&lt; result &lt;&lt; endl;
+                      
+                          return 0;
+                      }
+                        </code>
+                      </pre>
+                      
+
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+    <script src="prism.js"></script>
+</body>
+
+</html>
